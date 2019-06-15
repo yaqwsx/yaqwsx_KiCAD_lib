@@ -8,6 +8,7 @@
 # (http://pcb.gatema.cz/kriteria-dat-pro-pool-servis/).
 # Just execute this script in your KiCad project directory and the Gerber files will be renamed.
 #
+# Last update: 2019-06-15
 
 import glob
 import os
@@ -18,15 +19,15 @@ gerbers.extend(glob.glob('*.drl'))
 
 # File renaming rules.
 gerber_types = [
-    {'from': '-B.SilkS.gbr',   'to': '-B.SilkS.gbr.plb'},
-    {'from': '-B.Mask.gbr',    'to': '-B.Mask.gbr.smb'},
-    {'from': '-B.Cu.gbr',      'to': '-B.Cu.gbr.bot'},
-    {'from': '-Inner1.Cu.gbr', 'to': '.G2L'},
-    {'from': '-Inner2.Cu.gbr', 'to': '.G3L'},
-    {'from': '-F.Cu.gbr',      'to': '-F.Cu.gbr.top'},
-    {'from': '-F.Mask.gbr',    'to': '-F.Mask.gbr.smt'},
-    {'from': '-F.SilkS.gbr',   'to': '-F.SilkS.gbr.plt'},
-    {'from': '-Edge.Cuts.gbr', 'to': '-Edge.Cuts.gbr.dim'},
+    {'from': '-B_SilkS.gbr',   'to': '-B_SilkS.gbr.plb'},
+    {'from': '-B_Mask.gbr',    'to': '-B_Mask.gbr.smb'},
+    {'from': '-B_Cu.gbr',      'to': '-B_Cu.gbr.bot'},
+    {'from': '-Inner1_Cu.gbr', 'to': '.G2L'},
+    {'from': '-Inner2_Cu.gbr', 'to': '.G3L'},
+    {'from': '-F_Cu.gbr',      'to': '-F_Cu.gbr.top'},
+    {'from': '-F_Mask.gbr',    'to': '-F_Mask.gbr.smt'},
+    {'from': '-F_SilkS.gbr',   'to': '-F_SilkS.gbr.plt'},
+    {'from': '-Edge_Cuts.gbr', 'to': '-Edge_Cuts.gbr.dim'},
     {'from': '-NPTH.drl',      'to': '-NPTH.drl.mil'},
     {'from': '.drl',           'to': '.drl.pth'},
 ]
